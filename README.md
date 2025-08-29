@@ -1,4 +1,4 @@
-# tdarr-plugin-AMD DO NOT USE YET, FIXING
+# tdarr-plugin-AMD
 This plugin aims to allow users to use hevc_vaapi encoding to use AMD GPUs for the transcoding. It is entirely based on "Migz Transcode Using Nvidia GPU & FFMPEG" plugin.
 
 To use:
