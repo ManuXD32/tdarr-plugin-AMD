@@ -226,7 +226,7 @@ const plugin = (file, librarySettings, inputs, otherArguments) => {
       if (
         file.ffProbeData.streams[i].codec_name !== 'hevc' && file.ffProbeData.streams[i].codec_name !== 'vp9'
       ) {
-        response.preset = `, -map 0 -c:v hevc_vaapi -vaapi_device /dev/dri/renderD128 -b:v ${targetBitrate}k -maxrate ${maximumBitrate}k -minrate ${minimumBitrate}k -vf "hwupload" -c:a copy -c:s copy ${extraArguments} ${genpts}`;
+        response.preset = `<io> -c:v hevc_vaapi -vaapi_device /dev/dri/renderD128 -b:v ${targetBitrate}k -maxrate ${maximumBitrate}k -minrate ${minimumBitrate}k -vf format=nv12,hwupload -c:a copy -c:s copy ${extraArguments} ${genpts}`;
         response.processFile = true;
         return response;
       }
